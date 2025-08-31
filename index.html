@@ -21,11 +21,12 @@
   <style>
     .hero-section {
       background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
-      min-height: 50vh;
+      min-height: 70vh;
       display: flex;
       align-items: center;
+      justify-content: center;
       position: relative;
-      padding: 40px 0;
+      padding: 60px 0;
     }
     .hero-section::before {
       content: '';
@@ -38,8 +39,8 @@
       opacity: 0.1;
     }
     .profile-image {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       border: 5px solid white;
       box-shadow: 0 10px 30px rgba(0,0,0,0.3);
@@ -117,6 +118,22 @@
     
     /* Mobile icon fixes */
     @media (max-width: 768px) {
+      .hero-section {
+        min-height: 80vh;
+        padding: 20px 0;
+      }
+      
+      .hero-section .container {
+        padding: 0 15px;
+      }
+      
+      .hero-section .row {
+        margin: 0;
+      }
+      
+      .hero-section .col-lg-6 {
+        padding: 0 10px;
+      }
       .social-link {
         display: flex !important;
         align-items: center;
@@ -129,6 +146,88 @@
       .social-link i {
         display: block !important;
         font-size: inherit !important;
+      }
+      
+      .hero-section {
+        min-height: 70vh;
+        padding: 40px 0;
+      }
+      
+      .hero-section .row {
+        min-height: auto;
+        text-align: center;
+      }
+      
+      .hero-section .text-center.text-lg-start {
+        text-align: center !important;
+      }
+      
+      .hero-section .justify-content-lg-start {
+        justify-content: center !important;
+      }
+      
+      .profile-image {
+        width: 150px;
+        height: 150px;
+        margin-top: 2rem;
+      }
+      
+      .hero-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+      
+      .hero-section .lead {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .hero-section .btn {
+        margin: 0.5rem;
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+      }
+    }
+    
+    /* Extra small devices (phones) */
+    @media (max-width: 576px) {
+      .hero-section {
+        min-height: 85vh;
+        padding: 15px 0;
+      }
+      
+      .hero-section h1 {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+      }
+      
+      .hero-section .lead {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+      }
+      
+      .profile-image {
+        width: 120px;
+        height: 120px;
+        margin-top: 1.5rem;
+      }
+      
+      .hero-section .btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+        margin: 0.3rem;
+      }
+      
+      .hero-section .d-flex {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .hero-section .d-flex .btn {
+        width: 100%;
+        max-width: 200px;
+        margin: 0.3rem 0;
       }
     }
     
@@ -399,7 +498,7 @@
   <!-- Hero Section -->
   <section class="hero-section" id="home">
     <div class="container position-relative">
-      <div class="row align-items-center">
+      <div class="row align-items-center justify-content-center">
         <div class="col-lg-6 text-center text-lg-start">
           <div class="text-white">
             <h1 class="display-3 fw-bold mb-2 text-white">Shiuh Yaw Phang</h1>
@@ -414,9 +513,9 @@
             </div>
           </div>
         </div>
-                 <div class="col-lg-6 text-center mt-4 mt-lg-0">
-           <img src="assets/img/profile.jpeg" alt="Shiuh Yaw Phang" class="profile-image">
-         </div>
+        <div class="col-lg-6 text-center mt-4 mt-lg-0">
+          <img src="assets/img/profile.jpeg" alt="Shiuh Yaw Phang" class="profile-image">
+        </div>
       </div>
     </div>
   </section>
