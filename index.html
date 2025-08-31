@@ -15,7 +15,7 @@
   <link href="assets/css/nucleo-icons.css" rel="stylesheet" />
   <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- CSS Files -->
   <link id="pagestyle" href="assets/css/argon-dashboard.css?v=2.1.0" rel="stylesheet" />
   <style>
@@ -112,6 +112,23 @@
       transform: scale(1.1);
       color: white;
       box-shadow: 0 6px 20px rgba(30, 64, 175, 0.4);
+    }
+    
+    /* Mobile icon fixes */
+    @media (max-width: 768px) {
+      .social-link {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 60px !important;
+        height: 60px !important;
+        line-height: 1 !important;
+        font-size: 1.5rem !important;
+      }
+      .social-link i {
+        display: block !important;
+        font-size: inherit !important;
+      }
     }
     
     /* Timeline item colors */
@@ -770,7 +787,7 @@
           <div class="card border-0 shadow-sm h-100">
             <div class="card-body p-4">
               <div class="social-link mx-auto mb-3" style="width: 80px; height: 80px; line-height: 80px; font-size: 2rem;">
-                <i class="fas fa-flag"></i>
+                <i class="fas fa-globe"></i>
               </div>
               <h5 class="card-title">English</h5>
               <p class="card-text text-muted">Native or Bilingual</p>
@@ -792,7 +809,7 @@
           <div class="card border-0 shadow-sm h-100">
             <div class="card-body p-4">
               <div class="social-link mx-auto mb-3" style="width: 80px; height: 80px; line-height: 80px; font-size: 2rem;">
-                <i class="fas fa-comments"></i>
+                <i class="fas fa-flag"></i>
               </div>
               <h5 class="card-title">Bahasa Malaysia</h5>
               <p class="card-text text-muted">Limited Working</p>
