@@ -61,15 +61,32 @@
       }
       
       .hero-section .d-flex {
-        flex-direction: column !important;
+        flex-direction: row !important;
         align-items: center !important;
+        justify-content: space-between !important;
         width: 100%;
+        gap: 1rem;
+      }
+      
+      .hero-buttons {
+        justify-content: space-between !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: row !important;
+      }
+      
+      .hero-buttons.justify-content-center {
+        justify-content: space-between !important;
+      }
+      
+      .hero-buttons.justify-content-lg-start {
+        justify-content: space-between !important;
       }
       
       .hero-section .btn {
-        width: 100%;
-        max-width: 250px;
-        margin: 0.5rem 0;
+        width: auto;
+        min-width: 120px;
+        margin: 0;
         font-size: 1rem;
         padding: 0.75rem 1.5rem;
       }
@@ -98,6 +115,49 @@
       
       .hero-section {
         scroll-margin-top: 100px;
+      }
+      
+      /* Force mobile button layout */
+      .hero-buttons {
+        justify-content: space-between !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 1rem !important;
+      }
+      
+      /* Languages section tablet grid */
+      #languages .row.g-4 {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1rem !important;
+      }
+      
+      #languages .col-md-4 {
+        width: 100% !important;
+        max-width: none !important;
+        flex: none !important;
+      }
+      
+      .hero-btn-left {
+        flex: 0 0 auto !important;
+        margin: 0 !important;
+        width: 140px !important;
+        max-width: 140px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }
+      
+      .hero-btn-right {
+        flex: 0 0 auto !important;
+        margin: 0 !important;
+        width: 160px !important;
+        max-width: 160px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
       }
       
       /* Mobile hamburger menu styling */
@@ -174,13 +234,42 @@
       .hero-section .btn {
         font-size: 0.9rem;
         padding: 0.6rem 1.2rem;
-        margin: 0.3rem 0;
+        margin: 0;
+        min-width: 100px;
       }
       
-      .hero-section .d-flex .btn {
-        width: 100%;
-        max-width: 200px;
-        margin: 0.3rem 0;
+      .hero-section .d-flex {
+        gap: 0.5rem;
+      }
+      
+      /* Phone-specific button layout */
+      .hero-buttons {
+        justify-content: space-between !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+      }
+      
+      .hero-btn-left {
+        flex: 0 0 auto !important;
+        margin: 0 !important;
+        width: 120px !important;
+        max-width: 120px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }
+      
+      .hero-btn-right {
+        flex: 0 0 auto !important;
+        margin: 0 !important;
+        width: 140px !important;
+        max-width: 140px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
       }
       
       /* Phone-specific scroll margins */
@@ -190,6 +279,19 @@
       
       .hero-section {
         scroll-margin-top: 120px;
+      }
+      
+      /* Languages section mobile grid */
+      #languages .row.g-4 {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+      }
+      
+      #languages .col-md-4 {
+        width: 100% !important;
+        max-width: none !important;
+        flex: none !important;
       }
     }
     .hero-section::before {
@@ -733,9 +835,9 @@
               focusing on eCommerce, mobile applications, and blockchain technology. 
               Passionate about creating innovative and secure products that enhance customer experience.
             </p>
-            <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
-              <a href="#about" class="btn btn-light btn-lg px-4">About Me</a>
-              <a href="#contact" class="btn btn-outline-light btn-lg px-4">Contact Me</a>
+            <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 hero-buttons">
+              <a href="#about" class="btn btn-light btn-lg px-4 hero-btn-left">About Me</a>
+              <a href="#contact" class="btn btn-outline-light btn-lg px-4 hero-btn-right">Contact Me</a>
             </div>
           </div>
         </div>
