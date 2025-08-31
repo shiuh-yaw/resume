@@ -3,7 +3,7 @@
 A modern, responsive resume website showcasing my professional experience and skills.
 
 ## 🚀 Live Demo
-Visit: [https://shiuh-yaw.github.io/resume](https://shiuh-yaw.github.io/resume)
+Visit: [https://shiuh-yaw.github.io/resume/](https://shiuh-yaw.github.io/resume/)
 
 ## 🛠️ Technologies Used
 - HTML5
