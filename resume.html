@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <title>
+    Phang Shiuh Yaw - Professional Resume
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  <!-- Nucleo Icons -->
+  <link href="assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS Files -->
+  <link id="pagestyle" href="assets/css/argon-dashboard.css?v=2.1.0" rel="stylesheet" />
+  <style>
+    .hero-section {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #9333ea 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('assets/img/office-dark.jpg') center/cover;
+      opacity: 0.1;
+    }
+    .profile-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 5px solid white;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      object-fit: cover;
+    }
+    .section-padding {
+      padding: 80px 0;
+    }
+    .skill-badge {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      margin: 5px;
+      display: inline-block;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 8px rgba(79, 70, 229, 0.3);
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 30px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    }
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 12px;
+      width: 2px;
+      height: calc(100% + 18px);
+      background: #e9ecef;
+    }
+    .timeline-item:last-child::after {
+      display: none;
+    }
+    .contact-card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(79, 70, 229, 0.1);
+      transition: transform 0.3s ease;
+      border: 1px solid rgba(79, 70, 229, 0.05);
+    }
+    .contact-card:hover {
+      transform: translateY(-5px);
+    }
+    .social-link {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      color: white;
+      text-align: center;
+      line-height: 50px;
+      margin: 0 10px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+    }
+    .social-link:hover {
+      transform: scale(1.1);
+      color: white;
+      box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <div class="container position-relative">
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center text-lg-start">
+          <div class="text-white">
+            <h1 class="display-3 fw-bold mb-3 text-white">Shiuh Yaw Phang</h1>
+            <p class="lead mb-5 opacity-90">
+              Leading Solutions Engineering with over 10 years of experience in software engineering, 
+              focusing on eCommerce, mobile applications, and blockchain technology. 
+              Passionate about creating innovative and secure products that enhance customer experience.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
+              <a href="#about" class="btn btn-light btn-lg px-4">Learn More</a>
+              <a href="#contact" class="btn btn-outline-light btn-lg px-4">Contact Me</a>
+            </div>
+          </div>
+        </div>
+                 <div class="col-lg-6 text-center mt-5 mt-lg-0">
+           <img src="assets/img/profile.jpeg" alt="Shiuh Yaw Phang" class="profile-image">
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section-padding bg-white" id="about" style="background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center mb-5">
+          <h2 class="display-5 fw-bold mb-4">About Me</h2>
+          <p class="lead text-muted">
+            As the Director of Solutions Engineering at Checkout.com, I lead a team of engineers who design, 
+            develop, and deploy cutting-edge solutions for integrating payments and blockchain technology 
+            with the company's platform. I have over 10 years of experience in software engineering, 
+            with a focus on eCommerce and mobile applications, and I am passionate about leveraging 
+            my skills to create innovative and secure products.
+          </p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4 text-center">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body p-4">
+                             <div class="social-link mx-auto mb-3" style="width: 80px; height: 80px; line-height: 80px; font-size: 2rem;">
+                 <i class="fas fa-credit-card"></i>
+               </div>
+               <h5 class="card-title">Solutions Engineering</h5>
+               <p class="card-text text-muted">
+                 Leading technical solutions for payment processing and blockchain integration with $32B monthly volume.
+               </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body p-4">
+                             <div class="social-link mx-auto mb-3" style="width: 80px; height: 80px; line-height: 80px; font-size: 2rem;">
+                 <i class="fas fa-mobile-alt"></i>
+               </div>
+               <h5 class="card-title">Mobile Development</h5>
+               <p class="card-text text-muted">
+                 Expert in iOS development, mobile architecture, and leading mobile engineering teams.
+               </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body p-4">
+                             <div class="social-link mx-auto mb-3" style="width: 80px; height: 80px; line-height: 80px; font-size: 2rem;">
+                 <i class="fas fa-cogs"></i>
+               </div>
+               <h5 class="card-title">Product Management</h5>
+               <p class="card-text text-muted">
+                 Leading product strategies, managing teams, and delivering innovative e-commerce solutions.
+               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="section-padding bg-gray-100" id="experience" style="background: linear-gradient(180deg, #f1f5f9 0%, #e2e8f0 100%);">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center mb-5">
+          <h2 class="display-5 fw-bold mb-4">Professional Experience</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="timeline-item">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="row">
+                                     <div class="col-md-8">
+                     <h5 class="card-title fw-bold">Director, Solutions Engineering</h5>
+                     <h6 class="text-primary mb-2">Checkout.com • March 2022 - Present</h6>
+                     <p class="card-text">
+                       Spearheaded the transformation of payment processing for a whale merchant handling 
+                       $32B monthly transaction volume. Reduced solution implementation time from 1 month 
+                       to 2 weeks, orchestrating robust payment APIs and optimizing payment infrastructure.
+                     </p>
+                     <div class="mt-3">
+                       <span class="skill-badge">Payment APIs</span>
+                       <span class="skill-badge">Solutions Engineering</span>
+                       <span class="skill-badge">Client Consultation</span>
+                       <span class="skill-badge">Team Leadership</span>
+                     </div>
+                   </div>
+                   <div class="col-md-4 text-md-end">
+                     <span class="badge bg-primary">2022 - Present</span>
+                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="row">
+                                     <div class="col-md-8">
+                     <h5 class="card-title fw-bold">Director, Implementation Engineering</h5>
+                     <h6 class="text-primary mb-2">Checkout.com • September 2021 - Present</h6>
+                     <p class="card-text">
+                       Managing implementation efforts across APAC (China, Hong Kong, Singapore, Australia) 
+                       with over $30B in monthly processing. Leading a team of 2 implementation engineers 
+                       and 1 sales engineer. Responsible for solution pitching, POCs, and merchant integration.
+                     </p>
+                     <div class="mt-3">
+                       <span class="skill-badge">APAC Management</span>
+                       <span class="skill-badge">Implementation</span>
+                       <span class="skill-badge">POC Development</span>
+                       <span class="skill-badge">Team Leadership</span>
+                     </div>
+                   </div>
+                   <div class="col-md-4 text-md-end">
+                     <span class="badge bg-primary">2021 - Present</span>
+                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="row">
+                                     <div class="col-md-8">
+                     <h5 class="card-title fw-bold">Senior Implementation Engineer</h5>
+                     <h6 class="text-primary mb-2">Checkout.com • March 2020 - September 2021</h6>
+                     <p class="card-text">
+                       Led all technical discussions and demos involving scheme parameters. Implemented 
+                       and developed the GoSDK for Checkout and analyzed merchant payment processing 
+                       performance, providing technical support to ensure seamless operations.
+                     </p>
+                     <div class="mt-3">
+                       <span class="skill-badge">GoSDK</span>
+                       <span class="skill-badge">Technical Support</span>
+                       <span class="skill-badge">Payment Processing</span>
+                       <span class="skill-badge">Performance Analysis</span>
+                     </div>
+                   </div>
+                   <div class="col-md-4 text-md-end">
+                     <span class="badge bg-primary">2020 - 2021</span>
+                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="row">
+                  <div class="col-md-8">
+                    <h5 class="card-title fw-bold">Technical Lead & Product Manager (eCommerce & Mobile)</h5>
+                    <h6 class="text-primary mb-2">CXA Group • July 2017 - March 2020</h6>
+                    <p class="card-text">
+                      Oversaw a team of 6-7 Magento engineers in Vietnam and Indonesia. Managed projects 
+                      from inception to delivery, crafting cutting-edge e-commerce solutions for major 
+                      institutions like HSBC, OCBC, and Great Eastern. Owned end-to-end development of 
+                      CXADirect Distribution Platform and corporate web app.
+                    </p>
+                    <div class="mt-3">
+                      <span class="skill-badge">Magento</span>
+                      <span class="skill-badge">Product Management</span>
+                      <span class="skill-badge">Team Leadership</span>
+                      <span class="skill-badge">E-commerce</span>
+                    </div>
+                  </div>
+                  <div class="col-md-4 text-md-end">
+                    <span class="badge bg-primary">2017 - 2020</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="row">
+                  <div class="col-md-8">
+                    <h5 class="card-title fw-bold">Application Engineer</h5>
+                    <h6 class="text-primary mb-2">MOZAT PTE LTD • December 2016 - July 2017</h6>
+                    <p class="card-text">
+                      Played a pivotal role in transitioning mobile architecture from MVC to Clean Architecture. 
+                      Expertly managed 3rd-party library integrations using CocoaPods and Carthage. 
+                      Introduced GitFlow and elevated CI/CD pipelines with Bitrise and Fastlane.
+                    </p>
+                    <div class="mt-3">
+                      <span class="skill-badge">Clean Architecture</span>
+                      <span class="skill-badge">CocoaPods</span>
+                      <span class="skill-badge">CI/CD</span>
+                      <span class="skill-badge">GitFlow</span>
+                    </div>
+                  </div>
+                  <div class="col-md-4 text-md-end">
+                    <span class="badge bg-primary">2016 - 2017</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="row">
+                  <div class="col-md-8">
+                    <h5 class="card-title fw-bold">Mobile Engineer</h5>
+                    <h6 class="text-primary mb-2">Spacemob • July 2016 - December 2016</h6>
+                    <p class="card-text">
+                      Built mobile applications to enable space management throughout the coworking space 
+                      including visitor management application, meeting room booking iPad application, 
+                      and wireless payment application for transactions throughout the area.
+                    </p>
+                    <div class="mt-3">
+                      <span class="skill-badge">iOS Development</span>
+                      <span class="skill-badge">Mobile Apps</span>
+                      <span class="skill-badge">Payment Integration</span>
+                      <span class="skill-badge">Space Management</span>
+                    </div>
+                  </div>
+                  <div class="col-md-4 text-md-end">
+                    <span class="badge bg-primary">2016</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="row">
+                  <div class="col-md-8">
+                    <h5 class="card-title fw-bold">Lead Software Engineer, iOS</h5>
+                    <h6 class="text-primary mb-2">KFIT • May 2015 - May 2016</h6>
+                    <p class="card-text">
+                      Led a 4-member team in an Agile environment. Drove architectural redesign, 
+                      reducing reliance on external engineers. Successfully revamped the KFit App, 
+                      introducing 10+ features and increasing production by 20%.
+                    </p>
+                    <div class="mt-3">
+                      <span class="skill-badge">iOS Development</span>
+                      <span class="skill-badge">Team Leadership</span>
+                      <span class="skill-badge">Agile</span>
+                      <span class="skill-badge">Performance Optimization</span>
+                    </div>
+                  </div>
+                  <div class="col-md-4 text-md-end">
+                    <span class="badge bg-primary">2015 - 2016</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="row">
+                  <div class="col-md-8">
+                    <h5 class="card-title fw-bold">Senior iOS Developer</h5>
+                    <h6 class="text-primary mb-2">Mindvalley • April 2014 - July 2015</h6>
+                    <p class="card-text">
+                      Spearheaded the creation of Omvana's Watch application and drove HealthKit integration. 
+                      Collaborated closely with Apple Hong Kong to successfully launch the Watch Application 
+                      coinciding with the Apple Watch Launching event.
+                    </p>
+                    <div class="mt-3">
+                      <span class="skill-badge">Apple Watch</span>
+                      <span class="skill-badge">HealthKit</span>
+                      <span class="skill-badge">iOS Development</span>
+                      <span class="skill-badge">Apple Collaboration</span>
+                    </div>
+                  </div>
+                  <div class="col-md-4 text-md-end">
+                    <span class="badge bg-primary">2014 - 2015</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="row">
+                  <div class="col-md-8">
+                    <h5 class="card-title fw-bold">Mobile Application Developer</h5>
+                    <h6 class="text-primary mb-2">MediaCliQ Group • March 2011 - April 2014</h6>
+                    <p class="card-text">
+                      Created multiple applications for clients including Nestlé's first mobile food and 
+                      nutrition recipe app, and mobile gamification application for Castrol similar to Pokemon-Go. 
+                      Led office design operations and developed beacon applications.
+                    </p>
+                    <div class="mt-3">
+                      <span class="skill-badge">Mobile Development</span>
+                      <span class="skill-badge">Gamification</span>
+                      <span class="skill-badge">Beacon Technology</span>
+                      <span class="skill-badge">Client Projects</span>
+                    </div>
+                  </div>
+                  <div class="col-md-4 text-md-end">
+                    <span class="badge bg-primary">2011 - 2014</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="row">
+                  <div class="col-md-8">
+                    <h5 class="card-title fw-bold">Intern</h5>
+                    <h6 class="text-primary mb-2">Intel Corporation • June 2009 - February 2010</h6>
+                    <p class="card-text">
+                      Started professional journey as an intern at Intel Corporation, gaining foundational 
+                      experience in software development and corporate environment.
+                    </p>
+                    <div class="mt-3">
+                      <span class="skill-badge">Software Development</span>
+                      <span class="skill-badge">Corporate Experience</span>
+                      <span class="skill-badge">Internship</span>
+                    </div>
+                  </div>
+                  <div class="col-md-4 text-md-end">
+                    <span class="badge bg-primary">2009 - 2010</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section-padding bg-white" id="skills" style="background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center mb-5">
+          <h2 class="display-5 fw-bold mb-4">Technical Skills</h2>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h5 class="mb-4">Core Competencies</h5>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span>Product Demonstration</span>
+              <span>95%</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar bg-gradient-primary" style="width: 95%"></div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span>Problem Solving</span>
+              <span>90%</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar bg-gradient-success" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span>Customer Experience Management</span>
+              <span>85%</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar bg-gradient-info" style="width: 85%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h5 class="mb-4">Technical Expertise</h5>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span>iOS Development</span>
+              <span>92%</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar bg-gradient-warning" style="width: 92%"></div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span>Payment Processing</span>
+              <span>88%</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar bg-gradient-danger" style="width: 88%"></div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span>Team Leadership</span>
+              <span>80%</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar bg-gradient-dark" style="width: 80%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          <h5 class="mb-4">Additional Skills</h5>
+                     <div class="d-flex flex-wrap justify-content-center gap-2">
+             <span class="skill-badge">Python</span>
+             <span class="skill-badge">Ethereum & Solidity</span>
+             <span class="skill-badge">CocoaPods</span>
+             <span class="skill-badge">REST APIs</span>
+             <span class="skill-badge">Magento</span>
+             <span class="skill-badge">GoSDK</span>
+             <span class="skill-badge">HealthKit</span>
+             <span class="skill-badge">Agile/Scrum</span>
+             <span class="skill-badge">GitFlow</span>
+             <span class="skill-badge">Bitrise & Fastlane</span>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Languages Section -->
+  <section class="section-padding bg-white" id="languages" style="background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center mb-5">
+          <h2 class="display-5 fw-bold mb-4">Languages</h2>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4 text-center">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body p-4">
+              <div class="social-link mx-auto mb-3" style="width: 80px; height: 80px; line-height: 80px; font-size: 2rem;">
+                <i class="fas fa-flag"></i>
+              </div>
+              <h5 class="card-title">English</h5>
+              <p class="card-text text-muted">Native or Bilingual</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body p-4">
+              <div class="social-link mx-auto mb-3" style="width: 80px; height: 80px; line-height: 80px; font-size: 2rem;">
+                <i class="fas fa-language"></i>
+              </div>
+              <h5 class="card-title">Mandarin</h5>
+              <p class="card-text text-muted">Native or Bilingual</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body p-4">
+              <div class="social-link mx-auto mb-3" style="width: 80px; height: 80px; line-height: 80px; font-size: 2rem;">
+                <i class="fas fa-comments"></i>
+              </div>
+              <h5 class="card-title">Bahasa Malaysia</h5>
+              <p class="card-text text-muted">Limited Working</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="section-padding bg-gray-100" id="education" style="background: linear-gradient(180deg, #f1f5f9 0%, #e2e8f0 100%);">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center mb-5">
+          <h2 class="display-5 fw-bold mb-4">Education & Certifications</h2>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-center mb-3">
+                                 <div class="social-link me-3" style="width: 60px; height: 60px; line-height: 60px; font-size: 1.5rem;">
+                   <i class="fas fa-graduation-cap"></i>
+                 </div>
+                                 <div>
+                   <h5 class="card-title fw-bold mb-1">Bachelor of Computer Science, Software Engineering</h5>
+                   <h6 class="text-primary">University Malaysia Pahang (First-class Honours)</h6>
+                 </div>
+               </div>
+               <p class="card-text text-muted">
+                 Graduated with first-class honours. Focused on software engineering, algorithms, 
+                 and data structures. Completed comprehensive studies in computer science fundamentals.
+               </p>
+               <span class="badge bg-success">2006 - 2010</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-center mb-3">
+                                 <div class="social-link me-3" style="width: 60px; height: 60px; line-height: 60px; font-size: 1.5rem;">
+                   <i class="fas fa-trophy"></i>
+                 </div>
+                <div>
+                  <h5 class="card-title fw-bold mb-1">Professional Certifications</h5>
+                  <h6 class="text-primary">Various Institutions</h6>
+                </div>
+              </div>
+                             <ul class="list-unstyled text-muted">
+                 <li class="mb-2">• Python for Data Science and Machine Learning Bootcamp</li>
+                 <li class="mb-2">• Ethereum and Solidity: The Complete Developer's Guide</li>
+               </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section-padding bg-white" id="contact" style="background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center mb-5">
+          <h2 class="display-5 fw-bold mb-4">Get In Touch</h2>
+          <p class="lead text-muted">
+            I'm always interested in new opportunities and exciting projects. 
+            Let's connect and discuss how we can work together!
+          </p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="contact-card text-center">
+                         <div class="social-link mx-auto mb-3" style="width: 80px; height: 80px; line-height: 80px; font-size: 2rem;">
+               <i class="fas fa-envelope"></i>
+             </div>
+                         <h5 class="card-title">Email</h5>
+             <p class="card-text text-muted">phangshiuhyaw@gmail.com</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="contact-card text-center">
+                         <div class="social-link mx-auto mb-3" style="width: 80px; height: 80px; line-height: 80px; font-size: 2rem;">
+               <i class="fas fa-phone"></i>
+             </div>
+                         <h5 class="card-title">Phone</h5>
+             <p class="card-text text-muted">+65 9781 1037 (Work)</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="contact-card text-center">
+                         <div class="social-link mx-auto mb-3" style="width: 80px; height: 80px; line-height: 80px; font-size: 2rem;">
+               <i class="fas fa-map-marker-alt"></i>
+             </div>
+                         <h5 class="card-title">Location</h5>
+             <p class="card-text text-muted">Singapore, Singapore</p>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          <h5 class="mb-4">Connect With Me</h5>
+          <div class="d-flex justify-content-center">
+            <a href="https://www.linkedin.com/in/phangshiuhyaw/" class="social-link" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/shiuh-yaw" class="social-link" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+             <p class="mb-0">&copy; 2024 Shiuh Yaw Phang. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(0,0,0,0.1);">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">PSY</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#languages">Languages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--   Core JS Files   -->
+  <script src="assets/js/core/popper.min.js"></script>
+  <script src="assets/js/core/bootstrap.min.js"></script>
+  <script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="assets/js/argon-dashboard.min.js?v=2.1.0"></script>
+  
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Navbar background on scroll
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+      } else {
+        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+      }
+    });
+  </script>
+</body>
+
+</html>
