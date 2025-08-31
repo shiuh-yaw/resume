@@ -5,12 +5,6 @@ A modern, responsive resume website showcasing my professional experience and sk
 ## 🚀 Live Demo
 Visit: [https://shiuh-yaw.github.io/resume/](https://shiuh-yaw.github.io/resume/)
 
-## 🛠️ Technologies Used
-- HTML5
-- CSS3 (Bootstrap 5)
-- JavaScript
-- Argon Dashboard Pro Template
-- Font Awesome Icons
 
 ## 📋 Features
 - Responsive design
