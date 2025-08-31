@@ -28,6 +28,27 @@
       position: relative;
       padding: 60px 0;
     }
+    
+    /* Base mobile styles */
+    @media (max-width: 991px) {
+      .hero-section .row {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .hero-section .col-lg-6 {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+      
+      .hero-section .text-lg-start {
+        text-align: center !important;
+      }
+      
+      .hero-section .justify-content-lg-start {
+        justify-content: center !important;
+      }
+    }
     .hero-section::before {
       content: '';
       position: absolute;
@@ -118,22 +139,6 @@
     
     /* Mobile icon fixes */
     @media (max-width: 768px) {
-      .hero-section {
-        min-height: 80vh;
-        padding: 20px 0;
-      }
-      
-      .hero-section .container {
-        padding: 0 15px;
-      }
-      
-      .hero-section .row {
-        margin: 0;
-      }
-      
-      .hero-section .col-lg-6 {
-        padding: 0 10px;
-      }
       .social-link {
         display: flex !important;
         align-items: center;
@@ -148,14 +153,26 @@
         font-size: inherit !important;
       }
       
+      /* Hero section mobile fixes */
       .hero-section {
-        min-height: 70vh;
-        padding: 40px 0;
+        min-height: 80vh;
+        padding: 20px 0;
+      }
+      
+      .hero-section .container {
+        padding: 0 15px;
       }
       
       .hero-section .row {
-        min-height: auto;
+        margin: 0;
         text-align: center;
+        flex-direction: column;
+      }
+      
+      .hero-section .col-lg-6 {
+        padding: 0 10px;
+        width: 100%;
+        margin-bottom: 1rem;
       }
       
       .hero-section .text-center.text-lg-start {
@@ -166,10 +183,21 @@
         justify-content: center !important;
       }
       
+      .hero-section .d-flex {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .hero-section .d-flex .btn {
+        width: 100%;
+        max-width: 250px;
+        margin: 0.5rem 0;
+      }
+      
       .profile-image {
         width: 150px;
         height: 150px;
-        margin-top: 2rem;
+        margin-top: 1rem;
       }
       
       .hero-section h1 {
@@ -180,10 +208,10 @@
       .hero-section .lead {
         font-size: 1.1rem;
         margin-bottom: 1.5rem;
+        line-height: 1.6;
       }
       
       .hero-section .btn {
-        margin: 0.5rem;
         font-size: 1rem;
         padding: 0.75rem 1.5rem;
       }
@@ -194,6 +222,10 @@
       .hero-section {
         min-height: 85vh;
         padding: 15px 0;
+      }
+      
+      .hero-section .container {
+        padding: 0 10px;
       }
       
       .hero-section h1 {
@@ -210,18 +242,13 @@
       .profile-image {
         width: 120px;
         height: 120px;
-        margin-top: 1.5rem;
+        margin-top: 1rem;
       }
       
       .hero-section .btn {
         font-size: 0.9rem;
         padding: 0.6rem 1.2rem;
-        margin: 0.3rem;
-      }
-      
-      .hero-section .d-flex {
-        flex-direction: column;
-        align-items: center;
+        margin: 0.3rem 0;
       }
       
       .hero-section .d-flex .btn {
