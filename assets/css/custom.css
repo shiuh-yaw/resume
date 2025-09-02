@@ -4,6 +4,13 @@
 body {
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Prevent scroll accumulation */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 /* Profile Section - Left Column */
@@ -13,6 +20,7 @@ body {
   height: fit-content;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  z-index: 10;
 }
 
 .profile-image-main {
@@ -425,11 +433,6 @@ body {
     position: relative;
     top: auto !important;
   }
-}
-
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
 }
 
 /* Section Spacing */

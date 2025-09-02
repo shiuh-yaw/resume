@@ -1,37 +1,62 @@
-// iOS Safari viewport height fix
+// Custom JavaScript for Resume
+
+// Set viewport height for mobile devices
 function setVH() {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
-// Set initial viewport height
+// Initialize viewport height
 setVH();
 
-// Update on resize and orientation change
+// Event listeners for viewport height
 window.addEventListener('resize', setVH);
 window.addEventListener('orientationchange', setVH);
 
-// Smooth scrolling for navigation links with navbar offset
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      const navbar = document.querySelector('.navbar');
-      const navbarHeight = navbar ? 50 : 70;
-      const isMobile = window.innerWidth <= 991;
-      const mobileOffset = isMobile ? 20 : 0;
-      const targetPosition = target.offsetTop - navbarHeight - mobileOffset;
-      
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
-    }
+// Visual viewport support for mobile
+if (window.visualViewport) {
+  window.visualViewport.addEventListener('resize', setVH);
+}
+
+// Smooth scrolling with offset for fixed navbar
+function smoothScrollTo(targetId) {
+  const target = document.getElementById(targetId);
+  if (!target) return;
+  
+  const navbar = document.querySelector('.navbar');
+  const navbarHeight = navbar ? navbar.offsetHeight : 80;
+  const offset = navbarHeight + 20; // Add some extra padding
+  
+  const targetPosition = target.offsetTop - offset;
+  
+  // Prevent multiple rapid scrolls to the same target
+  if (window.currentScrollTarget === targetId && Date.now() - window.lastScrollTime < 1000) {
+    return;
+  }
+  
+  window.currentScrollTarget = targetId;
+  window.lastScrollTime = Date.now();
+  
+  window.scrollTo({
+    top: targetPosition,
+    behavior: 'smooth'
+  });
+}
+
+// Add click event listeners to all navigation links
+document.addEventListener('DOMContentLoaded', function() {
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      smoothScrollTo(targetId);
+    });
   });
 });
 
-// Navbar background on scroll
+// Navbar background change on scroll
 window.addEventListener('scroll', function() {
   const navbar = document.querySelector('.navbar');
   if (window.scrollY > 50) {
@@ -41,39 +66,36 @@ window.addEventListener('scroll', function() {
   }
 });
 
-// Mobile menu enhancements
+// Mobile menu setup
 function setupMobileMenu() {
   const navbarToggler = document.querySelector('.navbar-toggler');
   const navbarCollapse = document.querySelector('.navbar-collapse');
   const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
   
-  if (navbarToggler && navbarCollapse && navLinks.length > 0) {
-    // Close mobile menu when clicking on a link
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        if (navbarCollapse.classList.contains('show')) {
-          navbarToggler.click();
-        }
-      });
-    });
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!navbarToggler.contains(e.target) && !navbarCollapse.contains(e.target)) {
-        if (navbarCollapse.classList.contains('show')) {
-          navbarToggler.click();
-        }
+  if (!navbarToggler || !navbarCollapse) return;
+  
+  // Close mobile menu when clicking on a link
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      if (navbarCollapse.classList.contains('show')) {
+        navbarToggler.click();
       }
     });
-  }
+  });
+  
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!navbarToggler.contains(e.target) && !navbarCollapse.contains(e.target)) {
+      if (navbarCollapse.classList.contains('show')) {
+        navbarToggler.click();
+      }
+    }
+  });
 }
 
-// Setup mobile menu when DOM is loaded
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', setupMobileMenu);
-} else {
-  setupMobileMenu();
-}
+// Initialize mobile menu when DOM is loaded
+document.addEventListener('DOMContentLoaded', setupMobileMenu);
 
-// Also setup after a short delay to ensure Bootstrap is loaded
-setTimeout(setupMobileMenu, 100);
+// Also initialize on Bootstrap events
+document.addEventListener('shown.bs.collapse', setupMobileMenu);
+document.addEventListener('hidden.bs.collapse', setupMobileMenu);
