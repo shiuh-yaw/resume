@@ -348,6 +348,19 @@ html {
   border: 2px solid #e9ecef;
 }
 
+/* Nav download button - keep visible primary style */
+.navbar .btn-primary {
+  background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%) !important;
+  border: none !important;
+  color: #fff !important;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11);
+}
+
+.navbar .btn-primary:hover {
+  color: #fff !important;
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.2);
+}
+
 /* Responsive Design */
 @media (max-width: 991.98px) {
   .profile-section {
